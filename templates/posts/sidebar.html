@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-header">
+    Recent Posts
+  </div>
+  <ul class="list-group list-group-flush">
+  {% for title in titles %}
+    <li class="list-group-item"><a href="{% url 'post' title.pk %}">{{ title.title }}</a></li>
+  {% endfor %}
+  </ul>
+</div>
